@@ -34,6 +34,13 @@ resource "aws_security_group" "dev-bastion-sg" {
     to_port     = 22
     cidr_blocks = [var.MYIP]
   }
+
+  ingress {
+    from_port   = 22
+    protocol    = "tcp"
+    to_port     = 22
+    cidr_blocks = ["0.0.0.0/0"]
+  }
 }
 
 
@@ -53,6 +60,13 @@ resource "aws_security_group" "dev-prod-sg" {
     protocol        = "tcp"
     to_port         = 22
     security_groups = [aws_security_group.dev-bastion-sg.id]
+  }
+
+  ingress {
+    from_port   = 22
+    protocol    = "tcp"
+    to_port     = 22
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
 
@@ -79,6 +93,13 @@ resource "aws_security_group" "dev-backend-sg" {
     to_port         = 3306
     security_groups = [aws_security_group.dev-bastion-sg.id]
 
+  }
+
+  ingress {
+    from_port   = 22
+    protocol    = "tcp"
+    to_port     = 22
+    cidr_blocks = ["0.0.0.0/0"]
   }
 }
 
