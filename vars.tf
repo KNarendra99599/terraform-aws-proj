@@ -1,9 +1,9 @@
-variable "AWS_REGION" {
+variable AWS_REGION {
   default = "us-east-1"
 }
 
 
-variable "AMIS" {
+variable AMIS {
   type = map(any)
   default = {
     us-east-1 = "ami-0557a15b87f6559cf"
@@ -13,98 +13,98 @@ variable "AMIS" {
 
 }
 
-variable "PRIV_KEY_PATH" {
+variable PRIV_KEY_PATH {
   default = "devkey"
 }
 
 
-variable "PUB_KEY_PATH" {
+variable PUB_KEY_PATH {
   default = "devkey.pub"
 }
 
 
-variable "USERNAME" {
+variable USERNAME {
   default = "ubuntu"
 }
 
-variable "MYIP" {
+variable MYIP {
   default = "49.204.179.25/32"
 }
 
 
-variable "rmquser" {
+variable rmquser {
   default = "rabbit"
 }
 
 
-variable "rmqpass" {
+variable rmqpass {
   default = "rmqpass@9959942622"
 }
 
 
-variable "dbuser" {
+variable dbuser {
   default = "admin"
 }
 
-variable "dbpass" {
+variable dbpass {
   default = "admin123"
 }
 
-variable "db_name" {
+variable db_name {
   default = "accounts"
 }
 
-variable "instance_count" {
+variable instance_count {
   default = "1"
 }
 
-variable "VPC_NAME" {
+variable VPC_NAME {
   default = "dev-VPC"
 }
 
-variable "Zone1" {
+variable Zone1 {
   default = "us-east-1a"
 }
 
 
-variable "Zone2" {
+variable Zone2 {
   default = "us-east-1b"
 }
 
 
-variable "Zone3" {
+variable Zone3 {
   default = "us-east-1c"
 }
 
-variable "VpcCIDR" {
+variable VpcCIDR {
   default = "10.1.0.0/16"
 }
 
 
-variable "PubSub1CIDR" {
+variable PubSub1CIDR {
   default = "10.1.1.0/24"
 }
 
 
-variable "PubSub2CIDR" {
+variable PubSub2CIDR {
   default = "10.1.2.0/24"
 }
 
-variable "PubSub3CIDR" {
+variable PubSub3CIDR {
   default = "10.1.3.0/24"
 }
 
 
-variable "PrivSub1CIDR" {
+variable PrivSub1CIDR {
   default = "10.1.10.0/24"
 }
 
 
-variable "PrivSub2CIDR" {
+variable PrivSub2CIDR {
   default = "10.1.20.0/24"
 }
 
 
-variable "PrivSub3CIDR" {
+variable PrivSub3CIDR {
   default = "10.1.30.0/24"
 }
